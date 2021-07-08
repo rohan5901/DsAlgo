@@ -2,22 +2,26 @@
 #include <cmath>
 using namespace std;
 
-void transpose(int x[][5], int m)
+void transpose(int *a, int n)
 {
-    int y[m][m];
-    for (int i = 0; i < m; i++)
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < m; j++)
+        for (int j = i; j < n; j++)
         {
-            y[j][i] = x[i][j];
+            int temp = *(a + j * n + i);
+            *(a + j * n + i) = *(a + i * n + j);
+            *(a + i * n + j) = temp;
         }
     }
+}
 
-    for (int i = 0; i < m; i++)
+void show(int *a, int n)
+{
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < m; j++)
+        for (int j = 0; j < n; j++)
         {
-            cout << y[i][j] << " ";
+            cout << *(a + i * n + j) << " ";
         }
         cout << endl;
     }
@@ -27,7 +31,6 @@ int main()
 {
     int n;
     cin >> n;
-    //int *nptr = &n;
     int a[n][n];
     for (int i = 0; i < n; i++)
     {
@@ -37,7 +40,10 @@ int main()
         }
     }
 
-    transpose(a, n);
+    int *p = &a[0][0];
+
+    transpose(p, n);
+    show(p, n);
 
     return 0;
 }
