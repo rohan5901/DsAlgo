@@ -37,7 +37,8 @@ int lastOcc(int a[], int n, int i, int key)
 
 int main()
 {
-    int n, key;
+    int n;
+    int key;
     cin >> n >> key;
     int a[n];
     for (int i = 0; i < n; i++)
