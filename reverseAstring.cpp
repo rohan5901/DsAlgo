@@ -16,6 +16,7 @@ void reverse(string s)
 
 int main()
 {
-    string s = "rohan";
-    reverse("rohan");
+    string s;
+    getline(cin, s);
+    reverse(s);
 }

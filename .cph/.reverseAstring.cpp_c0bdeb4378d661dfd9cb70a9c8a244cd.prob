@@ -1,1 +1,1 @@
-{"name":"Local: reverseAstring","url":"d:\\DsAlgo\\reverseAstring.cpp","tests":[{"id":1625790968032,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DsAlgo\\reverseAstring.cpp","group":"local","local":true}
+{"name":"Local: reverseAstring","url":"d:\\DsAlgo\\reverseAstring.cpp","tests":[{"id":1625790968032,"input":"akshat is good","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DsAlgo\\reverseAstring.cpp","group":"local","local":true}
